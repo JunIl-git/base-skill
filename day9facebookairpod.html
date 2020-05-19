@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kokoa Tribe</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      min-width: 320px;
+      max-width: 480px;
+      background: black;
+    }
+
+    .wrap {
+      background: white;
+      border-radius: 5px 5px 5px 5px;
+      margin: 5px;
+    }
+
+    .image>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .font {
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    .contents {
+      padding: 15px 20px;
+    }
+
+    .title {
+      margin: 10px 0;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .Description,
+    .job {
+      font-size: 16px;
+      color: #babdc3;
+    }
+
+    .details {
+      padding: 0 20px 20px 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price {
+      font-weight: 700;
+    }
+
+    .people {
+      color: #babdc3;
+    }
+
+    .stars {
+      color: #f8bc50;
+    }
+
+    .border-radiusBox {
+      position: relative;
+    }
+
+    .sky {
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bird {
+      width: 20%;
+      height: 40%;
+      border: 3px solid white;
+      border-radius: 100%;
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+    }
+
+    .identity {
+      margin: 50px 0 30px 0;
+      text-align: center;
+    }
+
+    .button {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 50px;
+      padding: 0 0 30px 0;
+    }
+
+    .box-style {
+      width: 35%;
+      height: 90%;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .follow-button {
+      background: #6b75ff;
+      color: white;
+    }
+
+    .Message-button {
+      background: #eaecff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="first-wrap wrap">
+    <div class="image">
+      <img src="src/airpod.png" />
+    </div>
+    <div class="contents font">
+      <div class="title">
+        Apple AirPods
+      </div>
+      <div class="Description">
+        Combine intelligent design with breakthrough technology and crystal
+        clear sound.
+      </div>
+    </div>
+    <div class="details">
+      <span class="price font">
+        $159
+      </span>
+      <div class="review">
+        <span class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </span>
+        <span class="people font">16</span>
+      </div>
+    </div>
+  </div>
+  <!-- --------------------------------------------------------- -->
+  <div class="second-wrap wrap">
+    <div class="border-radiusBox">
+      <img class="sky" src="src/sky.jpg" />
+      <img class="bird" src="src/bird.jpg" />
+    </div>
+    <div class="identity">
+      <div class="people-name font">Clarke G Gillebert</div>
+      <div class="people-job job font">Eagle</div>
+    </div>
+    <div class="button">
+      <div class="follow-button box-style">
+        <span class="font">Follow</span>
+      </div>
+      <div class="Message-button box-style">
+        <span class="font">Message</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
