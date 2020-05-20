@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kokoa Tribe</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      background: #ededf7;
+    }
+
+    .wrap2 {
+      margin: 10px 20px;
+      border-radius: 30px;
+      width: 300px;
+      height: 600px;
+      box-shadow: 30px 31px 53px 0px #a4a6a4;
+    }
+
+    .wrap {
+      padding: 42px 25px 0;
+      background: #f8f8f8;
+      border-radius: 30px;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset -1px -3px 10px #bdc3c7;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      color: #393939;
+      margin-bottom: 60px;
+      font-weight: 700;
+    }
+
+    .box1 {
+      background: #ffffff;
+      border: 2px solid #f4f4f4;
+      opacity: 0.5;
+      font-size: 11px;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 10px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+    }
+
+    .input__email {
+      margin-bottom: 22px;
+    }
+
+    .input__password {
+      margin-bottom: 15px;
+    }
+
+    .forgot-password {
+      color: red;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 9px;
+      margin-bottom: 0;
+    }
+
+    .check-box {
+      margin-bottom: 45px;
+    }
+
+    .check-box__title {
+      opacity: 0.5;
+      font-size: 11px;
+    }
+
+    .check-box__box i {
+      font-size: 12px;
+      border: 1px solid #e9eae9;
+      color: #e96a78;
+    }
+
+    .enter-box {
+      background: #e2283e;
+    }
+
+    .or {
+      font-size: 11px;
+      font-weight: 700;
+      margin: 25px 0;
+    }
+
+    .connection {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 35px;
+    }
+
+    .facebook {
+      background: #475a95;
+      width: 110px;
+    }
+
+    .twitter {
+      background: #5da1f2;
+      width: 110px;
+    }
+
+    .box2 {
+      color: white;
+      border-radius: 30px;
+      padding: 10px 0;
+      font-size: 11px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .account {
+      font-size: 11px;
+    }
+
+    .account1 {
+      margin-bottom: 5px;
+    }
+
+    .account__content {
+      opacity: 0.5;
+    }
+
+    .account__red-write {
+      color: #eb727f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap2">
+    <div class="wrap">
+      <header class="title">
+        <span class="title-name">Sign in</span>
+      </header>
+      <section class="input">
+        <div class="input__email box1">
+          email
+        </div>
+        <div class="input__password box1">
+          password
+        </div>
+      </section>
+      <div class="forgot-password">
+        <span>Forgot Password?</span>
+      </div>
+      <div class="check-box">
+        <span class="check-box__box">
+          <i class="fas fa-check"></i>
+        </span>
+        <span class="check-box__title" for="check">Remember Me</span>
+      </div>
+
+      <div class="enter-box box2">
+        <span class="enter-box__title">Sign in</span>
+      </div>
+      <div class="or">
+        <span class="or__text">OR</span>
+      </div>
+      <div class="connection">
+        <div class="facebook box2">
+          <span class="facebook__title">Facebook</span>
+        </div>
+        <div class="twitter box2">
+          <span class="twitter__title">Twitter</span>
+        </div>
+      </div>
+      <div class="account account1">
+        <span class="account__content">need an account?</span>
+        <span class="account__red-write">Sign up</span>
+      </div>
+      <div class="account account2">
+        <span class="account__content">forgot your password?</span>
+        <span class="account__red-write">Retrive</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
