@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kokoa Tribe</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <style>
+    @import "reset.css";
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-family: "Montserrat", sans-serif;
+      padding: 12px 26px;
+      background: #eaecef;
+    }
+
+    .shadow {
+      box-shadow: inset -1px -3px 10px#a4a6a4;
+      border-radius: 20px;
+      width: 380px;
+      height: 825px;
+      z-index: 10;
+      position: absolute;
+    }
+
+    .wrap {
+      border-radius: 20px 20px 20px 20px;
+      width: 380px;
+      height: 825px;
+    }
+
+    .image-section {
+      position: relative;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .position {
+      width: 100%;
+      height: 100%;
+      padding: 20px 32px;
+      position: absolute;
+      top: 0;
+      box-sizing: border-box;
+      border: 20px 20px 0 0;
+    }
+
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 36px;
+    }
+
+    .back-share {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 200px;
+    }
+
+    .city-image {
+      width: 100%;
+      height: 395px;
+      border-radius: 20px 20px 0 0;
+      background: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0) 10%,
+          rgba(255, 255, 255, 0.25) 25%,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 0.75) 75%,
+          rgba(255, 255, 255, 1) 100%),
+        url('./city.jpg');
+      background-size: 100% 100%;
+    }
+
+    .images .small-box {
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+      border-radius: 10px;
+    }
+
+    .images {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .images .more-box {
+      background: #3f67ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 12px;
+    }
+
+    .image-section__text {
+      color: #6381ff;
+      display: flex;
+      font-size: 8px;
+      font-weight: 800;
+      margin-top: 27px;
+    }
+
+    .image-section__text div {
+      margin-right: 10px;
+      background: #dde3f9;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px 14px 14px 0;
+    }
+
+    .image-section__text .text__town {
+      width: 65px;
+    }
+
+    .image-section__text .text__historical {
+      width: 95px;
+    }
+
+    .image-section__text .text__for-kids {
+      width: 80px;
+    }
+
+    .content {
+      width: 100%;
+      height: 329px;
+      padding: 0 32px;
+      background: #f1f2f6;
+      position: relative;
+    }
+
+    .content__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      padding-top: 20px;
+    }
+
+    .content .title-like {
+      background: white;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ff2239;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+
+    .area {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .area i {
+      color: #1c51ff;
+    }
+
+    .area span {
+      color: #788bae;
+    }
+
+    .grade {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .grade .grade__star {
+      font-weight: 600;
+    }
+
+    .grade .grade__star i {
+      color: #ffbc00;
+    }
+
+    .grade .grade__star span {
+      margin-left: 5px;
+    }
+
+    .grade .meter {
+      color: #9cabc4;
+    }
+
+    .text-section1 {
+      font-size: 11px;
+      color: #92a1bd;
+      margin-bottom: 5px;
+    }
+
+    .text-section2 {
+      font-size: 15px;
+      line-height: 30px;
+      margin-bottom: 12px;
+    }
+
+    .text-section3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #0534ff;
+    }
+
+    .circle-wrap {
+      width: 80px;
+      height: 80px;
+      background: #e8ebf2;
+      border-radius: 42.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%) translateY(50%);
+    }
+
+    .circle-wrap .circle {
+      width: 56px;
+      height: 56px;
+      background: #3f67ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 28px;
+      border: 1px solid white;
+      color: white;
+      font-size: 10px;
+    }
+
+    .nav {
+      width: 100%;
+      height: 101px;
+      padding: 0 35px 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .nav .nav__column {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px;
+      height: 101px;
+      color: #9aa9c2;
+    }
+
+    .nav .nav__column .i-wrap {
+      width: 40px;
+      height: 101px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav .nav__column .blue {
+      border-top: 2px solid #0539ff;
+    }
+
+    .nav i {
+      cursor: pointer;
+    }
+
+    .nav .blue {
+      color: #3863ff;
+    }
+
+    .long-bar {
+      background: #e9ecf3;
+      width: 120px;
+      height: 5px;
+      margin: 0 auto;
+      position: relative;
+      top: -20px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap2">
+    <div class="wrap">
+      <div class="shadow"></div>
+      <div class="image-section">
+        <div class="city-image"></div>
+        <div class="position">
+          <header class="status-bar">
+            <span class="status-bar__column">
+              9:41
+            </span>
+            <span class="status-bar__column">
+              <i class="fas fa-signal"></i>
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-battery-full"></i>
+            </span>
+          </header>
+          <div class="back-share">
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <ul class="images">
+            <li>
+              <img class="small-box" src="src/city2.jpg" />
+            </li>
+            <li>
+              <img class="small-box" src="src/city3.jpg" />
+            </li>
+            <img class="small-box" src="src/city4.jpg" />
+            <li>
+              <div class="more-box small-box">
+                <span>+4</span>
+              </div>
+            </li>
+          </ul>
+          <div class="image-section__text">
+            <div class="text__town">TOWN</div>
+            <div class="text__historical">HISTORICAL</div>
+            <div class="text__for-kids">FOR KIDS</div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content__title">
+          <span class="title-name">City of Lights</span>
+          <div class="title-like">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+        <div class="area">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="area-title">New York City</span>
+        </div>
+        <div class="grade">
+          <span class="grade__star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>4.75</span>
+          </span>
+          <span class="meter">325m</span>
+        </div>
+        <div class="text-section1">
+          OVERVIEW
+        </div>
+        <div class="text-section2">
+          Latvia's capital Riga is enriched and inspired every day by its
+          multicultural community. Riga is perhaps the most
+        </div>
+        <div class="text-section3">
+          Read More
+        </div>
+        <div class="circle-wrap">
+          <div class="circle">
+            <i class="fas fa-route fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="nav__column">
+          <div class="i-wrap">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="i-wrap blue">
+            <i class="fas fa-globe-asia"></i>
+          </div>
+        </div>
+        <div class="nav__column">
+          <div class="i-wrap">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="i-wrap">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="long-bar"></div>
+    </div>
+  </div>
+</body>
+
+</html>
