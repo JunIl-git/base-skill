@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kokoa Tribe</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&display=swap");
+    @import "reset.css";
+
+    body {
+      font-family: "Baloo Chettan 2";
+      background: #f7f6ff;
+      padding: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .phone {
+      width: 295px;
+      height: 600px;
+      background: #ffffff;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset -1px -3px 10px#a4a6a4;
+    }
+
+    .screen {
+      width: 265px;
+      height: 570px;
+      padding: 0 10px 0;
+      background: hsl(0, 18%, 93%);
+      border-radius: 30px;
+      position: relative;
+    }
+
+    .camera {
+      width: 150px;
+      height: 20px;
+      background: white;
+      margin: 0 auto;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0 20px 0;
+    }
+
+    .header i {
+      color: #5c5c5c;
+      font-size: 14px;
+    }
+
+    .header__title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #3e3e3e;
+    }
+
+    .main-recipes__category {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .category-text {
+      color: #363636;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .category-view {
+      font-weight: 600;
+      font-size: 12px;
+      color: #e35865;
+    }
+
+    .main-recipes__pictures {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .picture-1st {
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 10%,
+          rgba(0, 0, 0, 0.15) 25%,
+          rgba(0, 0, 0, 0.3) 50%,
+          rgba(0, 0, 0, 0.45) 75%,
+          rgba(0, 0, 0, 0.6) 100%),
+        url("./src/Homecooking.jpg");
+      background-size: 100% 100%;
+    }
+
+    .picture-2nd {
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 10%,
+          rgba(0, 0, 0, 0.15) 25%,
+          rgba(0, 0, 0, 0.3) 50%,
+          rgba(0, 0, 0, 0.45) 75%,
+          rgba(0, 0, 0, 0.6) 100%),
+        url("./src/pastry1.jpg");
+      background-size: 100% 100%;
+    }
+
+    .picture-3rd {
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 10%,
+          rgba(0, 0, 0, 0.15) 25%,
+          rgba(0, 0, 0, 0.3) 50%,
+          rgba(0, 0, 0, 0.45) 75%,
+          rgba(0, 0, 0, 0.6) 100%),
+        url("./src/babies.jpg");
+      background-size: 100% 100%;
+    }
+
+    .picture-4th {
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 10%,
+          rgba(0, 0, 0, 0.15) 25%,
+          rgba(0, 0, 0, 0.3) 50%,
+          rgba(0, 0, 0, 0.45) 75%,
+          rgba(0, 0, 0, 0.6) 100%),
+        url("./src/smoothies1.png");
+      background-size: 100% 100%;
+    }
+
+    .picture {
+      width: 118px;
+      height: 73px;
+      color: #fcf9f8;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+
+    .scroll-wrap {
+      width: 100%;
+      height: 225px;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      margin-top: 10px;
+    }
+
+    .scroll-section {
+      width: 100%;
+      height: 330px;
+    }
+
+    .scroll-wrap::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scroll-category {
+      width: 100%;
+      height: 50px;
+      background: #fefefe;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .scroll-category .column-left__name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #505050;
+      margin-bottom: 5px;
+    }
+
+    .scroll-category .column-left__number {
+      font-size: 12px;
+      font-weight: 600;
+      color: #9b9b9b;
+    }
+
+    .scroll-category .category__column-right i {
+      color: #e1384a;
+      font-size: 15px;
+    }
+
+    .nav {
+      width: 100%;
+      height: 60px;
+      background: white;
+      box-sizing: content-box;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .nav i:nth-child(2) {
+      color: #e24454;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="phone">
+    <div class="screen">
+      <div class="camera"></div>
+      <header class="header">
+        <span class="header__column">
+          <i class="fas fa-bars"></i>
+        </span>
+        <span class="header__column">
+          <span class="header__title">Recipes</span>
+        </span>
+        <span class="header__column">
+          <i class="fas fa-search"></i>
+        </span>
+      </header>
+      <main class="main-recipes">
+        <div class="main-recipes__category">
+          <span class="category-text">
+            Popular Recipes
+          </span>
+          <span class="category-view">
+            View All
+          </span>
+        </div>
+        <div class="main-recipes__pictures">
+          <div class="picture picture-1st">
+            <span>Home cooking</span>
+          </div>
+          <div class="picture picture-2nd">
+            <span>Pastry Recipes</span>
+          </div>
+          <div class="picture picture-3rd">
+            <span>For Babies</span>
+          </div>
+          <div class="picture picture-4th">
+            <span>Smoothie Recipes</span>
+          </div>
+        </div>
+        <span class="category-text">
+          Other Recipes
+        </span>
+        <div class="scroll-wrap">
+          <div class="scroll-section">
+            <div class="scroll-category">
+              <span class="category__column-left">
+                <div class="column-left__name">Refreshments</div>
+                <div class="column-left__number">120 Recipes</div>
+              </span>
+              <span class="category__column-right">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+            <div class="scroll-category">
+              <span class="category__column-left">
+                <div class="column-left__name">Diet Dishes</div>
+                <div class="column-left__number">27 Recipes</div>
+              </span>
+              <span class="category__column-right">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+            <div class="scroll-category">
+              <span class="category__column-left">
+                <div class="column-left__name">Soup Recipes</div>
+                <div class="column-left__number">279 Recipes</div>
+              </span>
+              <span class="category__column-right">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+            <div class="scroll-category">
+              <span class="category__column-left">
+                <div class="column-left__name">Meat Dishes</div>
+                <div class="column-left__number">109 Recipes</div>
+              </span>
+              <span class="category__column-right">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+            <div class="scroll-category">
+              <span class="category__column-left">
+                <div class="column-left__name">Refreshments</div>
+                <div class="column-left__number">120 Recipes</div>
+              </span>
+              <span class="category__column-right">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+            <div class="scroll-category">
+              <span class="category__column-left">
+                <div class="column-left__name">Refreshments</div>
+                <div class="column-left__number">120 Recipes</div>
+              </span>
+              <span class="category__column-right">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav class="nav">
+        <i class="fas fa-home"></i>
+        <i class="fas fa-utensils"></i>
+        <i class="fas fa-edit"></i>
+        <i class="fas fa-calendar-plus"></i>
+      </nav>
+    </div>
+  </div>
+</body>
+
+</html>
